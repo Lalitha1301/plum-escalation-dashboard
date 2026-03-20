@@ -13,6 +13,5 @@ export const TABS = {
 };
 
 export const getSheetURL = ({ sheetId, gid }) => {
-  const base = `https://docs.google.com/spreadsheets/d/${sheetId}/export?format=csv&gid=${gid}`;
-  return `https://corsproxy.io/?${encodeURIComponent(base)}`;
+  return `/api/sheet?sheetId=${sheetId}&gid=${gid}`;
 };
